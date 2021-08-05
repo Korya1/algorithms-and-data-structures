@@ -129,9 +129,25 @@ int main()
 
 
 //========================== 3
-	board[4][2] = 1;
-	board[1][2] = 1;
-	board[2][4] = 1;
+	for (int i = 0; i < sizeY; ++i)
+	{
+		for (int j = 0; j < sizeX; j++)
+		{
+			int init = rand() % 13;
+			if (init > 9)
+			{
+				init = 1;
+			}
+			else
+			{
+				init = 0;
+			}	
+			
+			 board[i][j] = init;
+		}
+	}
+	board[0][0] = 0;
+	board[sizeX][sizeY] = 0;
 
 	for (int y = 0; y < sizeY; ++y)
 	{
